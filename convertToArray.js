@@ -12,6 +12,6 @@ fs.createReadStream('./aaa.csv')
         addressArray.push(parseRow)
     })
     .on("end", () => {
-        fs.writeFileSync('./addresses.js', JSON.stringify(addressArray))
+        fs.writeFileSync('./addresses.js', JSON.stringify(addressArray, null, 2))
     })
 
